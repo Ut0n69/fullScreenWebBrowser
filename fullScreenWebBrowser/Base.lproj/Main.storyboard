@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fullScreenWebBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAc-PY-OYa">
+                                <rect key="frame" x="26" y="607" width="323" height="30"/>
+                                <state key="normal" title="LAUNCH">
+                                    <color key="titleColor" red="0.99489795918367352" green="0.98979591836734693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r0F-Ur-Cw7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Screen Web Browser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsY-6E-Eyv">
+                                <rect key="frame" x="0.0" y="50" width="375" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mc3-c0-hMZ">
+                                <rect key="frame" x="26" y="114" width="323" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86012520900523426" green="0.85571431049751512" blue="0.8645361075129534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Mc3-c0-hMZ" firstAttribute="top" secondItem="PsY-6E-Eyv" secondAttribute="bottom" constant="30" id="3Sa-WP-sAa"/>
+                            <constraint firstAttribute="trailing" secondItem="PsY-6E-Eyv" secondAttribute="trailing" id="DNR-pX-dFp"/>
+                            <constraint firstItem="PsY-6E-Eyv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="MH5-RK-jPD"/>
+                            <constraint firstItem="Mc3-c0-hMZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="ZaS-7C-0oO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UAc-PY-OYa" secondAttribute="trailing" constant="10" id="dAf-1U-vPD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UAc-PY-OYa" secondAttribute="bottom" constant="30" id="e4s-lp-X8V"/>
+                            <constraint firstItem="PsY-6E-Eyv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nyf-uF-UVS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mc3-c0-hMZ" secondAttribute="trailing" constant="10" id="tmV-Bt-Owh"/>
+                            <constraint firstItem="UAc-PY-OYa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="zzh-e5-b8M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="Mc3-c0-hMZ" id="1Tq-cl-Kc7"/>
+                        <segue destination="2Jq-hU-ASS" kind="show" identifier="toWebViewController" id="gqg-Er-w6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82.400000000000006" y="36.431784107946029"/>
+        </scene>
+        <!--Wev View Controller-->
+        <scene sceneID="JH7-fp-uhr">
+            <objects>
+                <viewController id="2Jq-hU-ASS" customClass="WevViewController" customModule="fullScreenWebBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dLK-rV-Glr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y71-TI-kbh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b69-CJ-5cv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gf9-Nm-y3g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="gf9-Nm-y3g" id="xMU-NT-DZx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Edk-BU-npc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="36"/>
+        </scene>
+    </scenes>
+</document>
